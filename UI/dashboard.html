@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Maintenance Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100, 200,300,400,500,600,700,800,900|Coromorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    <script src="https://cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="header-brand">Maintenance Tracker</a>
+        <nav>
+            <ul>
+                <li><a class="active" href="dashboard.html">Dashboard</a></li> 
+                <li><a href="view_all.html">Request Registry</a></li>  
+                <li><a href="signin.html">Sign Out <i class="fa fa-sign-out"></i></a></li>
+            </ul>            
+        </nav>
+    </header>
+    <main>
+       <div>
+           <div class="container-1">
+                <div class="col-75">
+                    <div class="50">
+                        <h3>My Maintenance | Repair Requests</h3>
+                        <hr>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Request Name</th>
+                                    <th>Category</th>
+                                    <th>Response</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td> 
+                                    <td> Computer Monitor</td>
+                                    <td> Maintenance</td>
+                                    <td>Approved</td>
+                                    <td>Resolved</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td> Epson Printer </td>
+                                    <td> Maintenance</td>
+                                    <td>Approved</td> 
+                                    <td>Resolved</td>   
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td> CISCO Router </td>
+                                    <td> Repair</td>
+                                    <td>Declined</td>  
+                                    <td></td>  
+                                </tr>
+                                <tr>                                        
+                                    <td>4</td>
+                                    <td> Software Upgrade (Windows 10) </td>
+                                    <td> Maintenance</td>
+                                    <td>Approved</td>  
+                                    <td>In Progress</td>  
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td> Broken CCTV Camera</td>
+                                    <td> Repair</td>
+                                    <td>Approved</td>
+                                    <td>Resolved</td>    
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+               </div>
+            </div>
+            <div class="container-2">
+               <div class="col-25">
+                <form action="/action_page.php">
+                    <div>
+                        <h3> Create a Request.</h3>
+                        <hr>
+                        <label for="rname">Request Name</label>
+                        <input type="text" id="rname" name="requestname" placeholder="Request Name..." required>
+
+                        <label for="description">Description</label>
+                        <textarea type="text" name="editor" rows="7" required></textarea>
+
+                        <label for="category">Category</label>
+                        <select id="category" name="category">
+                            <option value="maintenance">Maintenance</option>
+                            <option value="repair">Repair</option>
+                        </select>
+                        <label for="department">Department</label>
+                        <select id="department" name="department">
+                            <option value="purchase">Purchase & Supplies</option>
+                            <option value="accounts">Repair</option>
+                            <option value="administration">Administration</option>
+                            <option value="it">IT</option>
+                            <option value="security">Security</option>
+                            <option value="hr">Human Resource</option>
+                        </select>
+                        <input type="submit" value="Add Request">
+                    </div>
+                </form>
+               </div>
+            </div>
+       </div> 
+       
+    </main>
+    
+    <script type="text/javascript">
+        CKEDITOR.replace('editor');
+    </script>
+</body>
+</html>
