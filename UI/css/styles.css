@@ -131,7 +131,6 @@ header nav ul li a:hover {
     -ms-flex: 50%;
     flex: 50%;
 }
-.col-50,
 .col-75 {
     padding: 30px 16px;
 }
@@ -143,6 +142,15 @@ header nav ul li a:hover {
     margin: 0 auto;
     width: 50%;
     float: right;
+}
+.container-2 {
+    background-color: #f2f2f2;
+    padding: 5px 10px 5px 10px;
+    border: 10px solid lightgrey;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 30%;
+    float: left;
 }
 .btn {
     background-color: #4CAF50;
@@ -246,6 +254,37 @@ a:hover {
     left: 0;
     height: 25px;
     background-color: #eee;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -webkit-card-shadow: 0 10px 6px -6px #777;
+    max-width: 60%;
+    margin: auto;
+    text-align: left;
+    font-family: arial;
+    float: left;
+    padding: 10px;
+    border-radius: 5px;
+    justify-content: space-between;
+
+}
+
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
 }
 
 

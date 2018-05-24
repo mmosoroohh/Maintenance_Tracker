@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Maintenance Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100, 200,300,400,500,600,700,800,900|Coromorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+</head>
+<body>
+    <header>
+        <a href="index.html" class="header-brand">Maintenance Tracker</a>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li> 
+                <li><a class="active" href="view_all.html">Request Registry</a></li>
+                <li><a href="signin.html">Sign Out <i class="fa fa-sign-out"></i></a></li>
+            </ul>            
+        </nav>
+    </header>
+    <main>
+        <div class="col-75">
+        <h2>Maintenance | Repair Registry.</h2>
+        <input type="text" id="myInput" onkeyup="myFuction()" placeholder="Search Requests.." title="Type in a name">
+        <table>
+            <tr>
+                <th>#</th>
+                <th style="width:30%">Name</th>
+                <th>Department</th>
+                <th>Category</th>
+                <th>Action</th>
+                <th>Response</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Computer Monitor</td>
+                <td>Purchase & Supplies</td>
+                <td>Maintenance</td>
+                <td><a href="view.html">View</a></td>
+                <td>Approved</i></td>
+                <td>Resolved</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Epson Printer</td>
+                <td>Accounts</td>
+                <td>Maintenance</td>
+                <td><a href="view.html">View</a></td>
+                <td>Approved</i></td>
+                <td>Resolved</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>CISCO Router</td>
+                <td>IT</td>
+                <td>Repair</td>
+                <td><a href="view.html">View</a></td>
+                <td>Declined</i></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Software Upgrade (Windows 10)</td>
+                <td>Administration</td>
+                <td>Maintenance</td>
+                <td><a href="view.html">View</a></td>
+                <td>Approved</td>
+                <td>In Progress</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Keyboard and Mouse</td>
+                <td>Security</td>
+                <td>Repair</td>
+                <td><a href="view.html">View</a></td>
+                <td>Approved</i></td>
+                <td>Resolved</td>
+            </tr>
+        </table>
+        <a href="#" class="previous">&laquo; Previous </a>
+        <a href="#" class="next">Next &raquo;</a>
+        </div>
+    </main>
+</body>
+</html>
