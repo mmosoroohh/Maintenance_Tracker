@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Maintenance Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100, 200,300,400,500,600,700,800,900|Coromorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    <script src="https://cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="header-brand">Maintenance Tracker</a>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li> 
+                <li><a href="view_all.html">Request Registry</a></li>
+                <li><a class="active" href="view.html">Request</a></li>  
+                <li><a href="signin.html">Sign Out <i class="fa fa-sign-in"></i></a></li>
+            </ul>            
+        </nav>
+    </header>
+    <main>
+        <h2 style="text-align: center">Request Details</h2>
+            <div class="card">
+               <strong><h4> Request Name</h4></strong> 
+               <p class="title">Computer Monitor</p>
+               <strong><p>Request Details</p></strong>
+               <p><span>The computer monitor was broken while trying to relocate from the Purchase and Supplies department 
+                        to the Accounts office. The relocation was to ease to the smooth rennovation of the 
+                        Purcahse and Supplies office.
+               </span></p>
+               <strong><p>Department</p></strong>
+               <span><p>Purchase & Supplies</p></span>
+               <strong><p>Category</p></strong>
+               <span><p>Repair</p></span>
+            </div>
+            <br>
+            <div class="card" style="align-content: center">
+                <h4 style="text-align: center">Feedback</h4>
+                <label for="feedback">Enter your feedback</label>
+                <textarea type="text" name="editor" rows="5" required></textarea>
+                <select id="response" name="response" required>
+                    <option value="approve">Approved</option>
+                    <option value="disapprove">Declined</option>
+                </select>
+                <input type="submit" value="Feedback">   
+            </div>
+    </main>
+    <script type="text/javascript">
+        CKEDITOR.replace('editor');
+    </script>
+</body>
+</html>

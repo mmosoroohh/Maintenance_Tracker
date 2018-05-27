@@ -262,14 +262,11 @@ a:hover {
     margin: auto;
     text-align: left;
     font-family: arial;
-    float: left;
     padding: 10px;
     border-radius: 5px;
     justify-content: space-between;
 
 }
-
-
 .title {
     color: grey;
     font-size: 18px;
