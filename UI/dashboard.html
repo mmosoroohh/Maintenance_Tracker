@@ -28,94 +28,114 @@
                     <div class="50">
                         <h3>My Maintenance | Repair Requests</h3>
                         <hr>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Request Name</th>
-                                    <th>Category</th>
-                                    <th>Response</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td> 
-                                    <td> Computer Monitor</td>
-                                    <td> Maintenance</td>
-                                    <td>Approved</td>
-                                    <td>Resolved</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td> Epson Printer </td>
-                                    <td> Maintenance</td>
-                                    <td>Approved</td> 
-                                    <td>Resolved</td>   
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td> CISCO Router </td>
-                                    <td> Repair</td>
-                                    <td>Declined</td>  
-                                    <td></td>  
-                                </tr>
-                                <tr>                                        
-                                    <td>4</td>
-                                    <td> Software Upgrade (Windows 10) </td>
-                                    <td> Maintenance</td>
-                                    <td>Approved</td>  
-                                    <td>Pending</td>  
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td> Broken CCTV Camera</td>
-                                    <td> Repair</td>
-                                    <td>Approved</td>
-                                    <td>Resolved</td>    
+                        <button id="myBtn">Create a request</button>
+                        <div id="myModal" class="modal">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Request Name</th>
+                                        <th>Category</th>
+                                        <th>Response</th>
+                                        <th>Status</th>
                                     </tr>
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td> 
+                                        <td> Computer Monitor</td>
+                                        <td> Maintenance</td>
+                                        <td>Approved</td>
+                                        <td>Resolved</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td> Epson Printer </td>
+                                        <td> Maintenance</td>
+                                        <td>Approved</td> 
+                                        <td>Resolved</td>                                           </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td> CISCO Router </td>
+                                        <td> Repair</td>
+                                        <td>Declined</td>  
+                                        <td></td>  
+                                    </tr>
+                                    <tr>                                        
+                                        <td>4</td>
+                                        <td> Software Upgrade (Windows 10) </td>
+                                        <td> Maintenance</td>
+                                        <td>Approved</td>  
+                                        <td>Pending</td>  
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td> Broken CCTV Camera</td>
+                                        <td> Repair</td>
+                                        <td>Approved</td>                                            <td>Resolved</td>    
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-               </div>
-            </div>
-            <div class="container-2">
-               <div class="col-25">
-                <form action="/action_page.php">
-                    <div>
-                        <h3> Create a Request.</h3>
-                        <hr>
-                        <label for="rname">Request Name</label>
-                        <input type="text" id="rname" name="requestname" placeholder="Request Name..." required>
-
-                        <label for="description">Description</label>
-                        <textarea type="text" name="editor" rows="7" required></textarea>
-
-                        <label for="category">Category</label>
-                        <select id="category" name="category">
-                            <option value="maintenance">Maintenance</option>
-                            <option value="repair">Repair</option>
-                        </select>
-                        <label for="department">Department</label>
-                        <select id="department" name="department">
-                            <option value="purchase">Purchase & Supplies</option>
-                            <option value="accounts">Repair</option>
-                            <option value="administration">Administration</option>
-                            <option value="it">IT</option>
-                            <option value="security">Security</option>
-                            <option value="hr">Human Resource</option>
-                        </select>
-                        <input type="submit" value="Add Request">
+                </div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>Create a Request.</h2>
                     </div>
-                </form>
-               </div>
+                    <div class="modal-body">
+                        <form action="/action_page.php">
+                            <div>
+                                <label for="rname">Request Name</label>
+                                <input type="text" id="rname" name="requestname" placeholder="Request Name..." required>
+            
+                                <label for="description">Description</label>
+                                <textarea type="text" name="editor" rows="7" required></textarea>
+            
+                                <label for="category">Category</label>
+                                <select id="category" name="category">
+                                    <option value="maintenance">Maintenance</option>
+                                    <option value="repair">Repair</option>
+                                </select>
+                                <label for="department">Department</label>
+                                <select id="department" name="department">
+                                    <option value="purchase">Purchase & Supplies</option>
+                                    <option value="accounts">Repair</option>
+                                    <option value="administration">Administration</option>
+                                    <option value="it">IT</option>
+                                    <option value="security">Security</option>
+                                    <option value="hr">Human Resource</option>
+                                </select>
+                                <input type="submit" value="Add Request">
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-       </div> 
-       
+        </div>
     </main>
     
-    <script type="text/javascript">
+    <script>
         CKEDITOR.replace('editor');
+
+    var modal = document.getElementById('myModal');
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementByClassName("close")[0];
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
     </script>
 </body>
 </html>
